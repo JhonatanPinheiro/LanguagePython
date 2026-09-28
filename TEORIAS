@@ -1,0 +1,8 @@
+O QUE SÃO PACOTES EM PYTHON ?
+    Pacotes são módulos que podem ser instalados e utilizados em seus programas Python. Eles permitem que você utilize código que foi escrito por outras pessoas, economizando tempo e esforço! 
+
+O papel do pip?
+    Pip é o gerenciador de pacotes do Python. Ele nos permite instalar, atualizar e remover pacotes facilmente. Ele se comunica com PyPI (Python Package Index), que é onde a maioria dos pacotes Python são armazenados!
+
+Site para encontrar bibliotecas prontas>> https://pypi.org/
+
