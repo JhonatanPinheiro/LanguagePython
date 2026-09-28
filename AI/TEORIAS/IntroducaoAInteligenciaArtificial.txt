@@ -1,6 +1,10 @@
 Como a Integência Artifical Nasceu ?
- - 1950 Alan Turen (Inicio)
- - 1966 que Joseph Heisenbauer no MIT ele criou o primeiro que a gente considera hoje o primeiro chatbot do mundo! conhecido como 'Eliza' (Substituição de palavras por padrão)
+    - 1950 Alan Turen (Inicio)
+    - 1966 que Joseph Heisenbauer no MIT ele criou o primeiro que a gente considera hoje o primeiro chatbot do mundo! conhecido como 'Eliza' (Substituição de palavras por padrão)
 
 Entendendo Deep Learning
-    - 
+    - Neurônios artificiais
+
+A Era das IAs Generativas
+    - MultiModal
+    - Video, Texto, Imagem, etc... 
