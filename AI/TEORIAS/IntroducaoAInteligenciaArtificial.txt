@@ -8,3 +8,10 @@ Entendendo Deep Learning
 A Era das IAs Generativas
     - MultiModal
     - Video, Texto, Imagem, etc... 
+
+IA no Cotidiano
+    - Text to Speech → É a tecnologia que transforma texto escrito em voz falada. Exemplo: você escreve uma frase e o sistema lê em voz alta.
+    - Speech to Text → É a tecnologia que converte fala em texto escrito. Exemplo: você fala ao microfone e o sistema transcreve suas palavras.
+    - Text to Speech = Texto → Voz 
+    - Speech to Text = Voz → Texto
+    
