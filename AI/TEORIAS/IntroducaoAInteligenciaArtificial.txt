@@ -25,4 +25,9 @@ IAs Interessantes
         - D-ID = Avatar falando	Transformar uma foto/personagem em um vídeo que fala (https://www.d-id.com/?utm_source=chatgpt.com)
         - HeyGen = Vídeo com avatar + voz e Criar vídeos completos com apresentadores virtuais (https://www.heygen.com/pt-br?utm_source=chatgpt.com)
 
+AI na Indústria
+    - Saúde e Finanças
+    - Robótica e Automação Inteligente
+    - Marketing
+
 
