@@ -52,3 +52,10 @@ Opções de Copilotes
     - GitHub Copilotp
     - Cursor (https://cursor.com/pt-BR/download)
     - Antigravity Google (https://antigravity.google/)
+
+Treinando uma IA de Aprendizagem: Explore o Poder do NotebookLM
+    - NOTEBOOKLM (https://notebook.google/?hl=pt-BR)
+        - OBJETIVO
+        - FONTES DE VIDEO
+        - FONTES DE TEXTO
+        
