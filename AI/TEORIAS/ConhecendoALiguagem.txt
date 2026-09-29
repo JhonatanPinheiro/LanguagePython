@@ -18,3 +18,42 @@
 | **Memória**           | `memoryview` | `memoryview(b"Olá")`   | Permite acessar dados binários diretamente na memória sem precisar copiar os dados.      |
 | **Nulo**              | `NoneType`   | `None`                 | Representa a ausência de um valor ou a inexistência de um resultado.                     |
 
+- Comando para Inciando o modo interativo - Está dentro do Terminal: python
+    - flag -i (python -i app.py)
+    - Para sair: exit()
+    - python -i first_file.py
+
+Função dir()
+    dir()
+        Mostra os nomes disponíveis no escopo atual, como variáveis,
+        funções e outros objetos.
+
+    dir(100)
+        Mostra os atributos e métodos disponíveis para o objeto 100.
+        Como 100 é um int, serão mostrados os recursos do tipo int.
+
+
+Função help()
+    help()
+        Abre o sistema interativo de ajuda do Python.
+        Permite consultar a documentação de classes, funções e objetos.
+
+    help(100)
+        Mostra a documentação relacionada ao objeto 100.
+        Como 100 é um int, apresenta informações sobre o tipo int.
+
+
+Diferença
+    dir()  → Mostra O QUE o objeto possui.
+    help() → Explica COMO o objeto ou recurso funciona.
+
+
+Exemplo
+    dir("Olá")
+        → Mostra os métodos disponíveis para str.
+
+    help(str.upper)
+        → Explica o funcionamento do método upper().
+
+    "olá".upper()
+        → "OLÁ"
