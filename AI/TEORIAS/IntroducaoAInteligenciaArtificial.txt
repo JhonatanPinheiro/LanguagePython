@@ -46,3 +46,9 @@ Utilizando Copilotos de Desenvolvimento de Software
        - SDD (Specification-Driven Development): desenvolvimento orientado à especificação. Define-se claramente o comportamento esperado do sistema antes ou durante a implementação
     - Copilotos
         - Ferramenta aceleradora (Boost)
+
+Opções de Copilotes
+    - Visual Studio Code Copiloto
+    - GitHub Copilotp
+    - Cursor (https://cursor.com/pt-BR/download)
+    - Antigravity Google (https://antigravity.google/)
