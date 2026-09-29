@@ -57,3 +57,16 @@ Exemplo
 
     "olá".upper()
         → "OLÁ"
+
+-- OPERADORES ARITMÉTICOS DO PYTHON
+| Operador | Nome            | Função                                       | Exemplo   |  Resultado |
+| -------- | --------------- | -------------------------------------------- | --------- | ---------: |
+| `+`      | Adição          | Soma dois valores                            | `10 + 5`  |       `15` |
+| `-`      | Subtração       | Subtrai um valor de outro                    | `10 - 5`  |        `5` |
+| `*`      | Multiplicação   | Multiplica valores                           | `10 * 5`  |       `50` |
+| `/`      | Divisão         | Divide e retorna um número decimal (`float`) | `10 / 3`  | `3.333...` |
+| `//`     | Divisão inteira | Divide descartando a parte decimal           | `10 // 3` |        `3` |
+| `%`      | Módulo / Resto  | Retorna o resto da divisão                   | `10 % 3`  |        `1` |
+| `**`     | Exponenciação   | Eleva um número a uma potência               | `2 ** 3`  |        `8` |
+| `+x`     | Positivo        | Indica valor positivo                        | `+10`     |       `10` |
+| `-x`     | Negativo        | Inverte o sinal do valor                     | `-10`     |      `-10` |
