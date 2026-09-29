@@ -14,3 +14,8 @@ print(type(texto))
 
 print(type(PI))
 
+#Realizando a conversão
+idade = str(idade)
+
+print(type(idade))
+
