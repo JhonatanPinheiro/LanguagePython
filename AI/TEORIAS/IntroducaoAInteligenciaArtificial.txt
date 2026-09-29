@@ -30,4 +30,19 @@ AI na Indústria
     - Robótica e Automação Inteligente
     - Marketing
 
-
+Utilizando Copilotos de Desenvolvimento de Software
+    - Lógica de Programação
+    - Arquitetura
+    - Melhores Práticas
+    - Orquestrador
+    - Técnicas E Metodologias
+        - Clean Código
+        - Design Patterns
+        - Guidelines
+        - Specs
+    - Metodologias
+       - DDD (Domain-Driven Design): desenvolvimento orientado ao domínio do negócio, organizando o sistema em torno das regras e conceitos da área de negócio.
+       - TDD (Test-Driven Development): desenvolvimento orientado a testes. Primeiro escreve-se o teste, depois o código e, por fim, refatora-se.
+       - SDD (Specification-Driven Development): desenvolvimento orientado à especificação. Define-se claramente o comportamento esperado do sistema antes ou durante a implementação
+    - Copilotos
+        - Ferramenta aceleradora (Boost)
