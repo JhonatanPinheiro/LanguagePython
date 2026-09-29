@@ -11,3 +11,9 @@ elif idade == IDADE_ESPECIAL:
 
 else:
     print("Ainda não pode tirar a CNH")
+
+#Condicao Ternario
+saldo = 1000
+saque = 100
+status = "Sucesso" if saldo >= saque else "Falha"
+print(status)
