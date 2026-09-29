@@ -58,4 +58,15 @@ Treinando uma IA de Aprendizagem: Explore o Poder do NotebookLM
         - OBJETIVO
         - FONTES DE VIDEO
         - FONTES DE TEXTO
-        
+
+- Comando de Versão
+    - python -V
+    - Documentação: https://docs.python.org/pt-br/3/
+- Extensions:
+    - VS CODE: • Python (Microsoft): Fornece o suporte básico, depuração, testes e gerenciamento de ambientes virtuais.
+                 Pylance: Melhora o preenchimento automático de código, navegação rápida e verificação estática de tipos.
+                • Black Formatter: Organiza e formata o seu código automaticamente seguindo o padrão padrão da comunidade.
+                • Flake8: Analisa o código em busca de erros de sintaxe e desvios das regras de estilo do PEP 8.
+                • Jupyter: Permite criar e executar notebooks interativos diretamente dentro do editor.
+    - autoDocstring: VSCode Python Docstring Generator
+    
