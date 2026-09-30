@@ -1,11 +1,11 @@
-#Loop Infinito com While
+#Loop Infinito com While    
 while True:
 
     numero = int(input("Informe um número: "))
 
     if numero == 10:
-        break
-
+       #break
+        continue
     print(numero)
     
 """"
