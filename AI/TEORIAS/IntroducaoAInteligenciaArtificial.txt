@@ -1,0 +1,71 @@
+Como a Integência Artifical Nasceu ?
+    - 1950 Alan Turen (Inicio)
+    - 1966 que Joseph Heisenbauer no MIT ele criou o primeiro que a gente considera hoje o primeiro chatbot do mundo! conhecido como 'Eliza' (Substituição de palavras por padrão)
+
+Entendendo Deep Learning
+    - Neurônios artificiais
+
+A Era das IAs Generativas
+    - MultiModal
+    - Video, Texto, Imagem, etc... 
+
+IA no Cotidiano
+    - Text to Speech → É a tecnologia que transforma texto escrito em voz falada. Exemplo: você escreve uma frase e o sistema lê em voz alta.
+    - Speech to Text → É a tecnologia que converte fala em texto escrito. Exemplo: você fala ao microfone e o sistema transcreve suas palavras.
+    - Text to Speech = Texto → Voz 
+    - Speech to Text = Voz → Texto
+
+IAs Interessantes
+    - Chatsbots: ChatGPT, Bing Chat (Microsoft), Meet Bard (Google), etc ...
+        - platform.openai.com/docs
+    - Geração de Imagens com IA: Bing Image Creator , Leonardo.Ai , MidJourney, etc ...
+    - Ferramenta Gama (https://gamma.app/pt-br) - Ele serve principalmente para criar apresentações, documentos e sites usando IA.
+    - Voz e Avatares Virtuais (ElevenLabs, D-ID  e HeyGen)
+        - ElevenLabs = Voz gerada por IA, Criar narrações, dublagens e vozes realistas (https://elevenlabs.io/?utm_source=chatgpt.com)
+        - D-ID = Avatar falando	Transformar uma foto/personagem em um vídeo que fala (https://www.d-id.com/?utm_source=chatgpt.com)
+        - HeyGen = Vídeo com avatar + voz e Criar vídeos completos com apresentadores virtuais (https://www.heygen.com/pt-br?utm_source=chatgpt.com)
+
+AI na Indústria
+    - Saúde e Finanças
+    - Robótica e Automação Inteligente
+    - Marketing
+
+Utilizando Copilotos de Desenvolvimento de Software
+    - Lógica de Programação
+    - Arquitetura
+    - Melhores Práticas
+    - Orquestrador
+    - Técnicas E Metodologias
+        - Clean Código
+        - Design Patterns
+        - Guidelines
+        - Specs
+    - Metodologias
+       - DDD (Domain-Driven Design): desenvolvimento orientado ao domínio do negócio, organizando o sistema em torno das regras e conceitos da área de negócio.
+       - TDD (Test-Driven Development): desenvolvimento orientado a testes. Primeiro escreve-se o teste, depois o código e, por fim, refatora-se.
+       - SDD (Specification-Driven Development): desenvolvimento orientado à especificação. Define-se claramente o comportamento esperado do sistema antes ou durante a implementação
+    - Copilotos
+        - Ferramenta aceleradora (Boost)
+
+Opções de Copilotes
+    - Visual Studio Code Copiloto
+    - GitHub Copilotp
+    - Cursor (https://cursor.com/pt-BR/download)
+    - Antigravity Google (https://antigravity.google/)
+
+Treinando uma IA de Aprendizagem: Explore o Poder do NotebookLM
+    - NOTEBOOKLM (https://notebook.google/?hl=pt-BR)
+        - OBJETIVO
+        - FONTES DE VIDEO
+        - FONTES DE TEXTO
+
+- Comando de Versão
+    - python -V
+    - Documentação: https://docs.python.org/pt-br/3/
+- Extensions:
+    - VS CODE: • Python (Microsoft): Fornece o suporte básico, depuração, testes e gerenciamento de ambientes virtuais.
+                 Pylance: Melhora o preenchimento automático de código, navegação rápida e verificação estática de tipos.
+                • Black Formatter: Organiza e formata o seu código automaticamente seguindo o padrão padrão da comunidade.
+                • Flake8: Analisa o código em busca de erros de sintaxe e desvios das regras de estilo do PEP 8.
+                • Jupyter: Permite criar e executar notebooks interativos diretamente dentro do editor.
+    - AutoDocstring: VSCode Python Docstring Generator
