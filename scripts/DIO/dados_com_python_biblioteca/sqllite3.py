@@ -3,8 +3,10 @@ import sqlite3  # Importa a biblioteca sqlite3 para trabalhar com banco SQLite
 
 # Criando ou conectando ao banco
 # Se o arquivo dados.db não existir, o Python cria automaticamente.
-# Se já existir, o Python apenas conecta ao banco existente.
-conexao = sqlite3.connect("dados.db")
+# O banco será criado exatamente no caminho informado abaixo.
+conexao = sqlite3.connect(
+    r"C:\Users\jhona\OneDrive\Documentos\Project GitHub\LanguagePython\scripts\dio\dados_com_python_biblioteca\dados.db"
+)
 
 
 # Cria um cursor.
@@ -46,3 +48,4 @@ dados = cursor.fetchall()
 
 # Exibe os dados recuperados do banco.
 print(dados)
+
