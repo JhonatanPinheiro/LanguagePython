@@ -1,0 +1,2 @@
+Python é uma linguagem poderosa. 
+Estamos aprendendo arquivos
