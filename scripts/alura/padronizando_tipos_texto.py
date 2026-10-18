@@ -28,6 +28,7 @@ df_clientes_cr_tratada["valor total"] = df_clientes_cr_tratada["valor total"].st
 df_clientes_cr_tratada["valor total"] = df_clientes_cr_tratada["valor total"].str.replace(".", "", regex=False)
 df_clientes_cr_tratada["valor total"] = df_clientes_cr_tratada["valor total"].str.replace(",", ".", regex=False)
 df_clientes_cr_tratada["valor total"] = df_clientes_cr_tratada["valor total"].fillna(0)
+df_clientes_cr_tratada["idade"] = df_clientes_cr_tratada["idade"].str.strip()
 df_clientes_cr_tratada[["valor total", "idade"]] = (df_clientes_cr_tratada[["valor total", "idade"]].apply(pd.to_numeric, errors="coerce"))
 
 
@@ -38,4 +39,5 @@ df_interacoes_clientes_tratada[["data interacao","duracao minutos","satisfacao c
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
-print(df_clientes_cr_tratada[["valor total", "idade"]].sample(10))
+print(df_clientes_cr_tratada[["valor total", "idade"]].sample(10)) #Vendo os dados (10 registros) do dataframe de forma aleatoria
+print(df_clientes_cr_tratada.isna().sum()) # Verificando qtd dos null em um dataframe
