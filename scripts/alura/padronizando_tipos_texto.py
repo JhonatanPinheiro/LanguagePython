@@ -22,13 +22,13 @@ df_interacoes_clientes_tratada = df_interacoes_clientes.copy()  # Cria uma cópi
 
 # Tratando as colunas selecionadas para um padrão df_clientes_cr_tratada
 df_clientes_cr_tratada[["segmento cliente", "status cliente", "canal aquisicao"]] = (df_clientes_cr_tratada[["segmento cliente", "status cliente", "canal aquisicao"]].apply(lambda coluna: coluna.astype("string").str.strip().str.upper()))
-df_clientes_cr_tratada[["nome","email","idade","segmento cliente","status cliente","canal aquisicao"]] = df_clientes_cr_tratada[["nome","email","idade","segmento cliente","status cliente","canal aquisicao"]].fillna("NAO INFORMADO")
+df_clientes_cr_tratada[["nome","email","segmento cliente","status cliente","canal aquisicao"]] = df_clientes_cr_tratada[["nome","email","segmento cliente","status cliente","canal aquisicao"]].fillna("NAO INFORMADO")
 df_clientes_cr_tratada[["data cadastro","ultima compra data"]]= df_clientes_cr_tratada[["data cadastro","ultima compra data"]].fillna("-")
 df_clientes_cr_tratada["valor total"] = df_clientes_cr_tratada["valor total"].str.replace("R$", "", regex=False)
 df_clientes_cr_tratada["valor total"] = df_clientes_cr_tratada["valor total"].str.replace(".", "", regex=False)
 df_clientes_cr_tratada["valor total"] = df_clientes_cr_tratada["valor total"].str.replace(",", ".", regex=False)
 df_clientes_cr_tratada["valor total"] = df_clientes_cr_tratada["valor total"].fillna(0)
-df_clientes_cr_tratada["valor total"] = pd.to_numeric(df_clientes_cr_tratada["valor total"], errors="coerce")
+df_clientes_cr_tratada[["valor total", "idade"]] = (df_clientes_cr_tratada[["valor total", "idade"]].apply(pd.to_numeric, errors="coerce"))
 
 
 # Tratando as colunas selecionadas para um padrão df_interacoes_clientes_tratada
@@ -38,4 +38,4 @@ df_interacoes_clientes_tratada[["data interacao","duracao minutos","satisfacao c
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
-print(df_clientes_cr_tratada['valor total'].sample(5))
+print(df_clientes_cr_tratada[["valor total", "idade"]].sample(10))
