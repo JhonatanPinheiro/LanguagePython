@@ -37,6 +37,10 @@ df_interacoes_clientes_tratada[["canal interacao", "tipo interacao", "satisfacao
 df_interacoes_clientes_tratada[["canal interacao","tipo interacao","status resolucao"]] = df_interacoes_clientes_tratada[["canal interacao","tipo interacao","status resolucao"]].fillna("NAO INFORMADO")
 df_interacoes_clientes_tratada[["data interacao","duracao minutos","satisfacao cliente"]]= df_interacoes_clientes_tratada[["data interacao","duracao minutos","satisfacao cliente"]].fillna("-")
 
+
+
+df_clientes_cr_tratada['valor total'] = df_clientes_cr_tratada.groupby('segmento cliente')['valor total'].transform(lambda x: x.fillna(x.median()))  # Preenche valores ausentes com a mediana de cada segmento
+df_clientes_cr_tratada['idade'] = df_clientes_cr_tratada.groupby('canal aquisicao')['idade'].transform(lambda x: x.fillna(x.median()))  # Preenche idades ausentes com a mediana de cada canal
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 print(df_clientes_cr_tratada[["valor total", "idade"]].sample(10)) #Vendo os dados (10 registros) do dataframe de forma aleatoria
