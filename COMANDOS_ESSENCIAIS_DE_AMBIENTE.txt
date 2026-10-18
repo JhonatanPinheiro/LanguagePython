@@ -1,0 +1,32 @@
+# Comando para eu criar uma venv
+python -m venv .venv
+
+#Comando para eu ativar e usar a venv
+.\.venv\Scripts\Activate.ps1 
+
+#Comando para sair da venv
+deactivate
+
+#Comando para executar a aplicacao dentro da venv
+.\.venv\Scripts\python.exe .\biblioteca_essenciais.py
+
+#Comando para salvar todas as bibliotes usadas na venv
+.\.venv\Scripts\python.exe -m pip freeze > requirements.txt
+
+#Comando para instalar o arquivo requirements que possui todas as bibliotes usadas no projeto
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+#Se estiver dentro da env
+.\Scripts\python.exe -m pip install -r ..\requirements.txt
+
+
+#Comando para saber as bibliotecas instaladas na venv
+python.exe -m pip list
+
+#Comando para executar o programa 
+Estando na pasta do projeto: .\venv\Scripts\python.exe .\usando_pandas.py
+Estando no caminho onde executa: python.exe usando_pandas.py
+------------------ Local ------------------------------------------------
+
+#Comando para saber as bibliotecas instaladas na máquina local 
+C:\python314\python.exe -m pip list
+

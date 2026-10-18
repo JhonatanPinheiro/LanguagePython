@@ -10,5 +10,5 @@ print(dados)
 
 df.to_csv("dados.csv", index=False) #Criando um csv usando o pandas
 
-df_relatorio_dados_em_csv = pd.read_csv("dados.csv")
+df_relatorio_dados_em_csv = pd.read_csv("dados.csv") #Abrindo o arquivo e gerando o DataFrame
 print(df_relatorio_dados_em_csv)

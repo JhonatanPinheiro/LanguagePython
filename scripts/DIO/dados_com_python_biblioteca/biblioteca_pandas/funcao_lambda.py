@@ -18,3 +18,4 @@ df_titanic["Fare_normalized"] = (
 
 # Exibe o DataFrame completo com as novas colunas
 print(df_titanic)
+
