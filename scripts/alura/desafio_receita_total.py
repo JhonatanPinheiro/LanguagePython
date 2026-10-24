@@ -2,6 +2,7 @@
 # Converta a coluna data_venda para datetime com pd.to_datetime(format="mixed", dayfirst=True)
 # Qual é a receita total? (soma dos valores numéricos)
 # A vendedora Renata ficou com valor NaN. Por quê?
+# Reposta: # Porque o valor original era "Não registrado", que não pode ser convertido, git add para número. O errors="coerce" transformou em NaN em vez de dar erro.
 
 import pandas as pd
 from datetime import datetime
