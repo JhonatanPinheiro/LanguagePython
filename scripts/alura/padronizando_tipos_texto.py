@@ -43,5 +43,30 @@ df_clientes_cr_tratada['valor total'] = df_clientes_cr_tratada.groupby('segmento
 df_clientes_cr_tratada['idade'] = df_clientes_cr_tratada.groupby('canal aquisicao')['idade'].transform(lambda x: x.fillna(x.median()))  # Preenche idades ausentes com a mediana de cada canal
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
-print(df_clientes_cr_tratada[["valor total", "idade"]].sample(10)) #Vendo os dados (10 registros) do dataframe de forma aleatoria
-print(df_clientes_cr_tratada.isna().sum()) # Verificando qtd dos null em um dataframe
+# print(df_clientes_cr_tratada[["valor total", "idade"]].sample(10)) #Vendo os dados (10 registros) do dataframe de forma aleatoria
+# print(df_clientes_cr_tratada.isna().sum()) # Verificando qtd dos null em um dataframe
+# print(df_clientes_cr_tratada)
+# print(df_clientes_cr_tratada["data cadastro"].sample(10))
+# print(df_clientes_cr_tratada["ultima compra data"].sample(10))
+
+df_clientes_cr_tratada["data cadastro"] = pd.to_datetime(df_clientes_cr_tratada["data cadastro"],format="mixed", errors="coerce", dayfirst=True)
+df_clientes_cr_tratada["ultima compra data"] = pd.to_datetime(df_clientes_cr_tratada["ultima compra data"], format="mixed", errors="coerce", dayfirst=True)
+
+
+df_interacoes_clientes_tratada["data interacao"] = df_interacoes_clientes_tratada["data interacao"].str.strip()
+df_interacoes_clientes_tratada["data interacao"] = pd.to_datetime(df_interacoes_clientes_tratada["data interacao"], format="mixed", errors="coerce", dayfirst=True)
+
+# df_clientes_cr_tratada.columns = df_clientes_cr_tratada.columns.str.upper() #Deixando as colunas em MAIUSCULOS
+
+df_clientes_cr_tratada.columns = df_clientes_cr_tratada.columns.str.replace(' ', '_') # Substitui os espaços por underline nos nomes das colunas dos clientes
+df_interacoes_clientes_tratada.columns = df_interacoes_clientes_tratada.columns.str.replace(' ', '_') # Substitui os espaços por underline nos nomes das colunas das interações
+
+#Alterando o nome da coluna
+df_clientes_cr_tratada = df_clientes_cr_tratada.rename(columns={"cliente_id":"id_cliente","ultima_compra_data":"data_ultima_compra"})
+
+
+# print(df_clientes_cr_tratada.info())
+df_clientes_cr_tratada["nome"] = df_clientes_cr_tratada["nome"].astype("string")
+# print(df_clientes_cr_tratada.info())
+print(df_clientes_cr_tratada.describe())
+print(df_interacoes_clientes_tratada.describe())
