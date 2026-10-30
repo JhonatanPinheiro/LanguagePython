@@ -1,0 +1,3 @@
+Relatorio de Vendas
+Total: 1500
+Novo registro adicionado.

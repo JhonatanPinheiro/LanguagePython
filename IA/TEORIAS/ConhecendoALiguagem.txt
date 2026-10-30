@@ -1,0 +1,72 @@
+- Tipos de Dados
+
+| Categoria             | Tipo Python  | Exemplo                | Teoria objetiva                                                                          |
+| --------------------- | ------------ | ---------------------- | ---------------------------------------------------------------------------------------- |
+| **Texto**             | `str`        | `"Olá"`                | Armazena uma sequência de caracteres, como palavras, frases e textos.                    |
+| **Inteiro**           | `int`        | `10`                   | Armazena números inteiros, positivos, negativos ou zero, sem casas decimais.             |
+| **Decimal**           | `float`      | `10.5`                 | Armazena números com casas decimais.                                                     |
+| **Complexo**          | `complex`    | `2 + 3j`               | Representa números complexos, formados por uma parte real e uma parte imaginária.        |
+| **Booleano**          | `bool`       | `True` / `False`       | Representa valores lógicos: verdadeiro ou falso.                                         |
+| **Lista**             | `list`       | `[1, 2, 3]`            | Coleção ordenada e mutável de elementos. Pode conter diferentes tipos de dados.          |
+| **Tupla**             | `tuple`      | `(1, 2, 3)`            | Coleção ordenada e imutável de elementos.                                                |
+| **Intervalo**         | `range`      | `range(10)`            | Representa uma sequência de números, muito utilizada em repetições e loops.              |
+| **Conjunto**          | `set`        | `{1, 2, 3}`            | Coleção não ordenada de elementos únicos. Não permite valores duplicados.                |
+| **Conjunto imutável** | `frozenset`  | `frozenset({1, 2, 3})` | Versão imutável de um `set`, que não pode ser alterada depois de criada.                 |
+| **Dicionário**        | `dict`       | `{"nome": "Jhonatan"}` | Armazena dados no formato **chave → valor**, permitindo acessar valores por suas chaves. |
+| **Bytes**             | `bytes`      | `b"Olá"`               | Armazena uma sequência imutável de valores binários, representados por bytes.            |
+| **Bytes mutável**     | `bytearray`  | `bytearray(b"Olá")`    | Similar a `bytes`, mas permite modificar os valores depois de criado.                    |
+| **Memória**           | `memoryview` | `memoryview(b"Olá")`   | Permite acessar dados binários diretamente na memória sem precisar copiar os dados.      |
+| **Nulo**              | `NoneType`   | `None`                 | Representa a ausência de um valor ou a inexistência de um resultado.                     |
+
+- Comando para Inciando o modo interativo - Está dentro do Terminal: python
+    - flag -i (python -i app.py)
+    - Para sair: exit()
+    - python -i first_file.py
+
+Função dir()
+    dir()
+        Mostra os nomes disponíveis no escopo atual, como variáveis,
+        funções e outros objetos.
+
+    dir(100)
+        Mostra os atributos e métodos disponíveis para o objeto 100.
+        Como 100 é um int, serão mostrados os recursos do tipo int.
+
+
+Função help()
+    help()
+        Abre o sistema interativo de ajuda do Python.
+        Permite consultar a documentação de classes, funções e objetos.
+
+    help(100)
+        Mostra a documentação relacionada ao objeto 100.
+        Como 100 é um int, apresenta informações sobre o tipo int.
+
+
+Diferença
+    dir()  → Mostra O QUE o objeto possui.
+    help() → Explica COMO o objeto ou recurso funciona.
+
+
+Exemplo
+    dir("Olá")
+        → Mostra os métodos disponíveis para str.
+
+    help(str.upper)
+        → Explica o funcionamento do método upper().
+
+    "olá".upper()
+        → "OLÁ"
+
+-- OPERADORES ARITMÉTICOS DO PYTHON
+| Operador | Nome            | Função                                       | Exemplo   |  Resultado |
+| -------- | --------------- | -------------------------------------------- | --------- | ---------: |
+| `+`      | Adição          | Soma dois valores                            | `10 + 5`  |       `15` |
+| `-`      | Subtração       | Subtrai um valor de outro                    | `10 - 5`  |        `5` |
+| `*`      | Multiplicação   | Multiplica valores                           | `10 * 5`  |       `50` |
+| `/`      | Divisão         | Divide e retorna um número decimal (`float`) | `10 / 3`  | `3.333...` |
+| `//`     | Divisão inteira | Divide descartando a parte decimal           | `10 // 3` |        `3` |
+| `%`      | Módulo / Resto  | Retorna o resto da divisão                   | `10 % 3`  |        `1` |
+| `**`     | Exponenciação   | Eleva um número a uma potência               | `2 ** 3`  |        `8` |
+| `+x`     | Positivo        | Indica valor positivo                        | `+10`     |       `10` |
+| `-x`     | Negativo        | Inverte o sinal do valor                     | `-10`     |      `-10` |
