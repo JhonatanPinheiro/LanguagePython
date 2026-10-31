@@ -119,9 +119,11 @@ df_analitico = df_unificado.copy()
 df_analitico['ano'] = df_analitico['data_cadastro'].dt.year
 df_analitico['mes'] = df_analitico['data_cadastro'].dt.month
 df_analitico['dia_nmr'] = df_analitico['data_cadastro'].dt.day
-df_analitico['dia_nome'] = df_analitico['data_cadastro'].dt.day_name()
+# pd.set_option("display.max_columns", None)
 print(df_analitico)
 
 # Agrupando as interações e calculando a satisfação média
 # print(df_unificado.groupby("tipo_interacao")["satisfacao_cliente"].mean().sort_values())
 
+df_analitico['perfil_tempo'] = df_analitico['dias_nmr'].apply(lambda x : 'novo' if x <= 1500 else 'antigo')
+print(df_analitico)
