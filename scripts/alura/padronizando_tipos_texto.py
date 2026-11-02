@@ -1,6 +1,7 @@
 import pandas as pd  # Importa a biblioteca Pandas
 from pathlib import Path  # Importa Path para manipular caminhos de arquivos
 import openpyxl
+import matplotlib.pyplot as plt  # Biblioteca responsável pela exibição dos gráficos
 
 def caminho_principal_clientes_crm():  # Define a função que retorna o caminho do arquivo CSV
     pasta_atual = Path(__file__).resolve().parent  # Define a pasta onde está o arquivo Python
@@ -120,10 +121,92 @@ df_analitico['ano'] = df_analitico['data_cadastro'].dt.year
 df_analitico['mes'] = df_analitico['data_cadastro'].dt.month
 df_analitico['dia_nmr'] = df_analitico['data_cadastro'].dt.day
 # pd.set_option("display.max_columns", None)
-print(df_analitico)
+# print(df_analitico)
 
 # Agrupando as interações e calculando a satisfação média
 # print(df_unificado.groupby("tipo_interacao")["satisfacao_cliente"].mean().sort_values())
 
-df_analitico['perfil_tempo'] = df_analitico['dias_nmr'].apply(lambda x : 'novo' if x <= 1500 else 'antigo')
-print(df_analitico)
+df_analitico['perfil_tempo'] = df_analitico['dia_nmr'].apply(lambda x : 'novo' if x <= 1500 else 'antigo')
+# print(df_analitico)
+
+# Removendo clientes duplicados pelo ID
+df_clientes_cr_tratada = df_clientes_cr_tratada.drop_duplicates(
+    subset='id_cliente',
+    keep='first'
+)
+
+# Contabilizando a quantidade de clientes por segmento
+df_clientes_cr_tratada['segmento_cliente'].value_counts().plot(
+    kind='pie',
+    title='Distribuição de clientes por segmento',
+    figsize=(5, 5),
+    autopct='%1.1f%%'
+)
+
+# plt.ylabel('')
+# plt.show()
+
+
+
+# # Verificando a quantidade de registros
+# print("Total de registros:", len(df_clientes_cr_tratada))
+
+# # Verificando a quantidade de clientes únicos
+# print("Clientes únicos:", df_clientes_cr_tratada['id_cliente'].nunique())
+
+# # Verificando se existem IDs duplicados
+# print("IDs duplicados:", df_clientes_cr_tratada['id_cliente'].duplicated().sum())
+
+# # Identificando todos os IDs duplicados
+# clientes_duplicados = df_clientes_cr_tratada[
+#     df_clientes_cr_tratada['id_cliente'].duplicated(keep=False)
+# ]
+
+# # Exibindo os registros duplicados
+# print(clientes_duplicados[
+#     ['id_cliente', 'nome', 'segmento_cliente']
+# ].sort_values('id_cliente'))
+
+# # Verificando quantos segmentos diferentes cada cliente possui
+# verificacao_segmentos = (
+#     df_clientes_cr_tratada
+#     .groupby('id_cliente')['segmento_cliente']
+#     .nunique()
+# )
+
+# # Exibindo clientes com mais de um segmento
+# print(verificacao_segmentos[verificacao_segmentos > 1])
+
+
+
+
+
+# Na aula, usamos diferentes tipos de gráficos para comunicar os insights da Connecta+. A escolha do gráfico certo é tão importante quanto a análise em si — um gráfico inadequado pode confundir a audiência ou, pior, comunicar uma conclusão errada.
+
+# Guia prático por pergunta que se quer responder:
+
+# Pergunta	Tipo de gráfico	Exemplo no projeto
+# "Qual categoria tem maior valor?"	Barras (horizontais para nomes longos)	Valor médio por segmento
+# "Como se distribui o total?"	Pizza (até 5-6 categorias) ou barras	Proporção de clientes por segmento
+# "Qual a composição de cada grupo?"	Barras empilhadas	Retenção por canal (ativo vs inativo)
+# "Como uma métrica evolui no tempo?"	Linha	Cadastros por mês
+# "Como os grupos mudam no tempo?"	Barras agrupadas	Canais de atendimento por ano
+# "Como os valores se distribuem?"	Histograma	Distribuição de idades
+# "Há outliers? Qual a dispersão?"	Boxplot	Duração do atendimento por tipo
+# "Há relação entre duas variáveis?"	Dispersão (scatter)	Idade vs valor gasto
+# Erros comuns a evitar:
+
+# Pizza com muitas fatias: acima de 5-6 categorias, a pizza fica ilegível. Use barras.
+# Barras para tendência temporal: barras sugerem independência entre períodos. Linhas mostram continuidade e tendência.
+# Escala que não começa em zero: em gráficos de barras, cortar o eixo Y exagera diferenças pequenas e pode induzir interpretações erradas.
+# 3D em qualquer contexto: efeitos 3D distorcem a percepção de tamanho e dificultam a leitura. Sempre preferir 2D.
+# Cores sem propósito: usar cores diferentes para cada barra quando não há necessidade de distinção visual adiciona ruído ao gráfico.
+# Dica para apresentações executivas:
+
+# Para diretoria, menos é mais. Um gráfico limpo com título claro, rótulos nos eixos e uma frase de insight na parte inferior comunica mais do que um dashboard cheio de visualizações competindo por atenção.
+
+# Para se aprofundar:
+
+# Atlassian: How to Choose the Right Data Visualization — guia visual com recomendação por tipo de dado e objetivo
+# Flourish: How to choose the right chart type — guia baseado no vocabulário visual do Financial Times
+# Documentação Pandas: Chart visualization — referência oficial sobre todos os tipos de gráficos disponíveis no .plot()
